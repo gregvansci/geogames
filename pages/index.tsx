@@ -1,19 +1,11 @@
 import type { NextPage } from 'next'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 const Home: NextPage = () => {
   return (
     <div className="flex flex-col items-center h-auto bg-primary-dark min-w-[600px]">
-      <nav className="fixed w-full px-2 py-4 border-b-2 md:px-4 md:mx-24 bg-primary-dark border-secondary-dark">
-        <div className="container w-[500px] md:w-[800px] lg:w-[1000px] flex flex-row flex-wrap items-center justify-between mx-auto">
-          <div className="flex items-center">
-            <h2 className="font-bold text-white">Geo Games</h2>
-          </div>
-          <div className="flex items-center gap-x-4">
-            <h4 className="text-gray-400">Games</h4>
-            <h4 className="text-gray-400">About</h4>
-          </div>
-        </div>
-      </nav>
+      <Navbar/>
       <section className="bg-gray-900 w-[500px] md:w-[850px] lg:w-[1150px] mt-12">
         <div className="grid py-16 mx-auto max-w-screen md:grid-cols-12 md:gap-8">
           <div className="mr-auto place-self-center md:col-span-7">
@@ -50,12 +42,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      <footer className="w-full py-8 mt-24 bg-secondary-dark">
-        <div className="flex flex-col items-center justify-center text-white">
-          <h4 className="font-medium">Geo Games</h4>
-          <p className="font-thin text-gray-400">Exercise your perspective.</p>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   )
 }
