@@ -15,6 +15,9 @@ module.exports = {
       'md': '900px',
       'lg': '1200px',
     },
+    fontFamily: {
+      sans: ["Inter var", "sans-serif"],
+    }
   },
   plugins: [
     require('flowbite/plugin'),
