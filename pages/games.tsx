@@ -5,7 +5,7 @@ import GameCard from "./components/GameCard"
 
 const Games: NextPage = () => {
   return (
-    <div className="flex flex-col items-center bg-gray-900">
+    <div className="flex font-sans flex-col items-center h-auto bg-primary-dark min-w-[600px]">
       <Navbar />
       <section className="w-full mt-12 text-white bg-gray-900 ">
         <div className="items-center w-[500px] md:w-[800px] lg:w-[1000px] pt-12 m-auto">
