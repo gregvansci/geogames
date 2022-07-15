@@ -10,9 +10,10 @@ const Games: NextPage = () => {
       <Head>
         <title>Geo Games</title>
         <link rel="icon" href="/logo.svg" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
       </Head>
       <Navbar />
-      <section className="w-[500px] md:w-[800px] lg:w-[1000px] mt-10 font-sans text-white bg-gray-900 ">
+      <section className="w-[500px] md:w-[800px] lg:w-[1000px] font-sans text-white bg-gray-900 ">
         <div className="items-center w-[500px] md:w-[800px] lg:w-[1000px] pt-12 m-auto">
           <h2 className="text-3xl font-bold">Game List</h2>
         </div>

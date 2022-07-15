@@ -9,9 +9,10 @@ const HigherLower: NextPage = () => {
       <Head>
         <title>Geo Games</title>
         <link rel="icon" href="/logo.svg" />
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
       </Head>
       <Navbar/>
-      <section className="relative flex flex-col items-center w-full h-screen mt-12 text-white bg-gray-900">
+      <section className="relative flex flex-col items-center w-full h-screen text-white bg-gray-900">
         <div className="relative flex flex-col items-center">
           <div className="bg-slate-800 w-[500px] md:w-[750px] lg:w-[800px] md:h-[50vh] mt-[2vh] rounded-2xl">
             <HigherLowerMap />
