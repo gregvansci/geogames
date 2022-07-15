@@ -5,8 +5,8 @@ interface GameCardProps {
 
 export default function GameCard (props: GameCardProps) {
   return (
-    <div className="relative m-auto text-center rounded w-36 md:w-48 h-36 bg-secondary-dark">
-      <a className="absolute text-white bottom-2 left-1/4" href={"/"+props.link}>{props.title}</a>
+    <div className="flex flex-col justify-end w-full text-center rounded h-36 lg:h-44 bg-secondary-dark ">
+      <a className="pb-2 text-white left-1/4" href={"/"+props.link}>{props.title}</a>
     </div>
   )
 }

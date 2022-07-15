@@ -16,7 +16,7 @@ const HigherLower: NextPage = () => {
           <div className="bg-slate-800 w-[500px] md:w-[750px] lg:w-[800px] md:h-[50vh] mt-[2vh] rounded-2xl">
             <HigherLowerMap />
           </div>
-          <div className="bg-slate-700 w-[400px] md:w-[550px] lg:w-[550px] md:h-[40vh] absolute top-[45vh] rounded-xl">
+          <div className="bg-slate-700 w-[450px] lg:w-[550px] md:h-[40vh] absolute top-[45vh] rounded-xl">
             <div className="text-center">
               <p className="text-base text-gray-200">Higher Lower</p>
               <p className="text-2xl font-bold text-">Population</p>

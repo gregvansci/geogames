@@ -12,11 +12,11 @@ const Games: NextPage = () => {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <Navbar />
-      <section className="w-full mt-12 font-sans text-white bg-gray-900">
+      <section className="w-[500px] md:w-[800px] lg:w-[1000px] mt-10 font-sans text-white bg-gray-900 ">
         <div className="items-center w-[500px] md:w-[800px] lg:w-[1000px] pt-12 m-auto">
           <h2 className="text-3xl font-bold">Game List</h2>
         </div>
-        <div className="grid w-[500px] md:w-[800px] lg:w-[1000px] m-auto grid-cols-2 pt-6 font-medium md:grid-cols-3 gap-y-6">
+        <div className="grid justify-between grid-flow-row grid-cols-3 gap-8 pt-6 font-medium ">
           <GameCard title="Higher Lower" link="HigherLower"/>
           <GameCard title="Country Names: World" link=""/>
           <GameCard title="Country Names: Europe" link=""/>

@@ -32,7 +32,7 @@ const Home: NextPage = () => {
         <div className="mb-4 text-center">
           <h2 className="text-2xl font-semibold text-white">Featured Games</h2>
         </div>
-        <div className="grid items-center grid-cols-2 pt-6 font-medium md:grid-cols-3 gap-y-6">
+        <div className="grid justify-between grid-flow-row grid-cols-3 gap-8 pt-6 font-medium">
           <GameCard title="Higher Lower" link="HigherLower"/>
           <GameCard title="Country Names: World" link=""/>
           <GameCard title="Country Names: Europe" link=""/>
