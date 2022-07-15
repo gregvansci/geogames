@@ -9,7 +9,7 @@ export default function Navbar () {
           <a href="../"className="font-bold text-white">Geo Games</a>
         </div>
         <div className="flex items-center gap-x-4">
-          <h4 className="text-gray-400">Games</h4>
+          <a href="../games" className="text-gray-400">Games</a>
           <h4 className="text-gray-400">About</h4>
         </div>
       </div>

@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WelcomeMap from './components/WelcomeMap'
+import GameCard from './components/GameCard'
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +20,7 @@ const Home: NextPage = () => {
             <p className="max-w-2xl mb-6 text-lg font-light text-gray-400 md:mb-8 md:text-xl">From the peak of Mt. Everest to the depths of Death Valley, learn what makes each country unique.</p>
             <a href="games" className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-900">
               Get started
-              <svg className="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              <svg className="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path></svg>
             </a>
           </div>
           <div className="invisible h-0 mt-0 md:h-auto md:visible md:col-span-5">
@@ -32,24 +33,12 @@ const Home: NextPage = () => {
           <h2 className="text-2xl font-semibold text-white">Featured Games</h2>
         </div>
         <div className="grid items-center grid-cols-2 pt-6 font-medium md:grid-cols-3 gap-y-6">
-          <div className="relative m-auto text-center rounded w-36 md:w-48 h-36 bg-secondary-dark">
-            <h4 className="absolute text-white bottom-2 left-1/4">Higher Lower</h4>
-          </div>
-          <div className="relative m-auto text-center rounded w-36 md:w-48 h-36 bg-secondary-dark">
-            <h4 className="absolute text-white bottom-2 left-1/4">Higher Lower</h4>
-          </div>
-          <div className="relative m-auto text-center rounded w-36 md:w-48 h-36 bg-secondary-dark">
-            <h4 className="absolute text-white bottom-2 left-1/4">Higher Lower</h4>
-          </div>
-          <div className="relative m-auto text-center rounded w-36 md:w-48 h-36 bg-secondary-dark">
-            <h4 className="absolute text-white bottom-2 left-1/4">Higher Lower</h4>
-          </div>
-          <div className="relative m-auto text-center rounded w-36 md:w-48 h-36 bg-secondary-dark">
-            <h4 className="absolute text-white bottom-2 left-1/4">Higher Lower</h4>
-          </div>
-          <div className="relative m-auto text-center rounded w-36 md:w-48 h-36 bg-secondary-dark">
-            <h4 className="absolute text-white bottom-2 left-1/4">Higher Lower</h4>
-          </div>
+          <GameCard title="Higher Lower" link="HigherLower"/>
+          <GameCard title="Country Names: World" link=""/>
+          <GameCard title="Country Names: Europe" link=""/>
+          <GameCard title="Country Names: Asia" link=""/>
+          <GameCard title="Country Names: Africa" link=""/>
+          <GameCard title="Capital Cities" link=""/>
         </div>
       </section>
       <Footer/>
