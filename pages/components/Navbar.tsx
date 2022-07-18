@@ -16,8 +16,8 @@ export default function Navbar ( { authModal }: NavbarProps ) {
         <div className="flex items-center gap-x-6 md:gap-x-8">
           <a href="../"className="flex flex-row items-center font-sans text-xl font-bold text-white gap-x-2 " >
             <div className="flex items-center justify-center w-8 h-8 border-2 rounded-full border-indigo-500/90">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.svg" className="h-6 pb-.5" alt="logo py-auto"/>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.svg" className="h-6 pb-.5" alt="logo py-auto"/>
             </div>
             Features
           </a>
