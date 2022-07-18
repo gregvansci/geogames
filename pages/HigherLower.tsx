@@ -1,9 +1,25 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import Navbar from "./components/Navbar";
-import HigherLowerMap from "./components/HigherLowerMap";
+import HigherLowerMap from "./maps/HigherLowerMap";
+import React, { useState } from 'react'
+import { auth } from '../firebase/firebase-config'
+import { onAuthStateChanged, signOut } from 'firebase/auth'
+import { useAuthState } from 'react-firebase-hooks/auth'
 
 const HigherLower: NextPage = () => {
+
+  const [openAuth, setOpenAuth] = useState(false)
+  const [user, loading, error] = useAuthState(auth);
+  const [isAuthenticated, setIsAuthenticated] = useState(user !== null ? true : false);
+  onAuthStateChanged(auth, user => {
+    setIsAuthenticated(user !== null ? true : false);
+  });
+  function handleOpenAuth() {
+    setOpenAuth(!openAuth);
+  }
+  console.log(isAuthenticated);
+
   return (
     <div className="flex font-sans flex-col items-center h-auto max-h-screen bg-primary-dark min-w-[600px]">
       <Head>
@@ -11,7 +27,7 @@ const HigherLower: NextPage = () => {
         <link rel="icon" href="/logo.svg" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
       </Head>
-      <Navbar/>
+      <Navbar authModal={handleOpenAuth} isAuthenticated={isAuthenticated}/>
       <section className="relative flex flex-col items-center w-full h-screen text-white bg-gray-900">
         <div className="relative flex flex-col items-center">
           <div className="bg-slate-800 w-[500px] md:w-[750px] lg:w-[800px] md:h-[50vh] mt-[2vh] rounded-2xl">
