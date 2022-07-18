@@ -8,7 +8,7 @@ const Games: NextPage = () => {
   return (
     <div className="flex font-sans flex-col items-center h-auto bg-primary-dark min-w-[600px]">
       <Head>
-        <title>Geo Games</title>
+        <title>Games - Features</title>
         <link rel="icon" href="/logo.svg" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
       </Head>

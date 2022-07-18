@@ -1,10 +1,12 @@
+interface NavbarProps {
+  authModal: Function
+}
 
-
-export default function Navbar () {
+export default function Navbar ( { authModal }: NavbarProps ) {
 
 
   return (
-    <nav className="h-[64px] w-full bg-primary-dark z-50">
+    <nav className="h-[64px] w-full bg-primary-dark z-40">
       <div className="container h-[64px] flex flex-row items-center justify-around mx-auto">
         <div className="block md:hidden w-[95px]">
           <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 20 20" fill="white">
@@ -24,12 +26,9 @@ export default function Navbar () {
           <a className="hidden font-sans text-sm font-normal text-gray-300 md:block hover:text-white">Random</a>
           <a className="hidden font-sans text-sm font-normal text-gray-300 md:block hover:text-white">About</a>
         </div>
-        <div className="flex items-center gap-x-6 md:gap-x-8">
-          <button className="hidden font-sans text-sm font-normal text-gray-300 md:block hover:text-white hover:animate-pulse">
-            Log In
-          </button>
-          <button className="px-3 py-1 font-sans text-sm font-normal text-gray-300 rounded-md ring-2 ring-gray-300 hover:ring-white hover:text-white hover:animate-pulse">
-            Sign Up
+        <div className="flex items-center">
+          <button onClick={event => authModal()} className="px-3 py-1 ml-8 font-sans text-sm font-normal text-gray-300 rounded-md ring-2 ring-gray-300 hover:ring-white hover:text-white hover:animate-pulse">
+            Log in
           </button>
         </div>
       </div>
