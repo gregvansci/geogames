@@ -12,8 +12,7 @@ export default function AuthModal({ openAuth, handleOpenAuth }: AuthModalProps) 
     const provider = new GoogleAuthProvider();
     signInWithPopup( auth, provider )
     .then((result:any) => {
-      console.log(result);
-      window.location.reload();
+      handleOpenAuth();
     })
     .catch((error:any) => {
       console.log(error);
@@ -22,7 +21,7 @@ export default function AuthModal({ openAuth, handleOpenAuth }: AuthModalProps) 
 
   return (
     <div className={openAuth ? "block" : "hidden"}>
-      <div className="relative z-50 modal" aria-labelledby="modal-title" role="dialog" aria-modal="false">
+      <div className="relative z-50">
         <div className="fixed inset-0 transition-opacity bg-gray-600 bg-opacity-75"></div>
         <div className="fixed inset-0 z-10 overflow-y-auto">
           <div className="flex items-end justify-center min-h-full p-4 text-center sm:items-center sm:p-0">

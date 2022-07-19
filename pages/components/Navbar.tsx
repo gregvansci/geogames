@@ -1,16 +1,20 @@
+import { useState } from 'react';
+import ProfileMenu from './ProfileMenu';
+
 interface NavbarProps {
   authModal: Function
+  openProfile: boolean
+  handleOpenProfile: Function
   isAuthenticated: boolean
 }
 
-export default function Navbar ( { authModal, isAuthenticated }: NavbarProps ) {
-
+export default function Navbar ( { authModal, openProfile, handleOpenProfile, isAuthenticated }: NavbarProps ) {
 
   return (
-    <nav className="h-[64px] w-full bg-primary-dark z-40">
-      <div className="container h-[64px] flex flex-row items-center justify-around mx-auto">
-        <div className="block md:hidden w-[95px]">
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 20 20" fill="white">
+    <nav className="h-[64px] w-full md:w-[800px] lg:w-[1000px]  bg-primary-dark z-30">
+      <div className="h-[64px] w-full flex flex-row items-center justify-between">
+        <div className="block md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 ml-5" viewBox="0 0 20 20" fill="white">
             <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
           </svg>
         </div>
@@ -27,16 +31,22 @@ export default function Navbar ( { authModal, isAuthenticated }: NavbarProps ) {
           <a className="hidden font-sans text-sm font-normal text-gray-300 md:block hover:text-white">Random</a>
           <a className="hidden font-sans text-sm font-normal text-gray-300 md:block hover:text-white">About</a>
         </div>
-        { isAuthenticated ?
-          <button>
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 20 20" fill="white">
-              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
-            </svg>
-          </button> :
-          <button onClick={event => authModal()} className="px-3 py-1 ml-8 font-sans text-sm font-normal text-gray-300 rounded-md ring-2 ring-gray-300 hover:ring-white hover:text-white hover:animate-pulse">
-          Log in
-          </button>          
-        }
+        <div className="flex justify-end mr-5 md:mr-0">
+          { isAuthenticated ?
+            <div className="relative h-6 p-0 m-0">
+              <button onClick={event => handleOpenProfile()}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 20 20" fill="white">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd" />
+                </svg>
+              </button>
+              <ProfileMenu openProfile={openProfile} handleOpenProfile={handleOpenProfile}/>
+            </div>
+            :
+            <button onClick={event => authModal()} className="px-3 py-1 ml-8 font-sans text-sm font-normal text-gray-300 rounded-md ring-2 ring-gray-300 hover:ring-white hover:text-white hover:animate-pulse">
+            Log in
+            </button>
+          }
+        </div>
       </div>
     </nav>
   )
