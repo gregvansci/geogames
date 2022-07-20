@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         "primary-dark": "#111827",
         "secondary-dark": "#1F2937",
+        "tertiary-dark": "#374151",
       },
     },
     screens: {
